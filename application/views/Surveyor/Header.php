@@ -24,7 +24,7 @@
               </li>
           </ul>
           <ul class="navbar-nav ml-auto">
-              <a class="nav-link" href="<?=base_url('IDE/AdminSignOut')?>"> 
+              <a class="nav-link" href="<?=base_url('IDE/SurveyorSignOut')?>"> 
                   <i class="fas fa-user-lock text-light"><span class="text-light"> Logout</span></i>
               </a>
           </ul>
@@ -45,9 +45,15 @@
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="<?=base_url("Admin/Surveyor")?>" class="nav-link <?php if ($Halaman == "Surveyor") { echo "active";} ?>">
+              <a href="<?=base_url("Surveyor/Profil")?>" class="nav-link <?php if ($Halaman == "Profil") { echo "active";} ?>">
               <i class="nav-icon fas fa-user-circle"></i>
-              <p><b>Surveyor</b></p> 
+              <p><b>Profil</b></p> 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?=base_url("Surveyor/Survei")?>" class="nav-link <?php if ($Halaman == "Survei") { echo "active";} ?>">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p><b>Survei</b></p> 
               </a>
             </li>
           </ul>

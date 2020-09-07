@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class IDE extends CI_Controller {
 
 	public function index(){
-		$this->load->view('Survei');
+    echo password_hash('3512021507960004', PASSWORD_DEFAULT);
+		// $this->load->view('Survei');
 	}
 
 	public function Admin(){
@@ -35,5 +36,37 @@ class IDE extends CI_Controller {
   public function AdminSignOut(){
 		$this->session->sess_destroy();
 		redirect(base_url('IDE/Admin'));
+  }
+
+  public function Surveyor(){
+    if($this->session->userdata('Surveyor')){
+			redirect(base_url('Surveyor/Profil'));
+		} else{
+      $this->load->view('Surveyor/SignIn');
+    }
+  }
+  
+  public function SurveyorSignIn(){ 
+    $Surveyor = $this->db->get_where('Surveyor', array('NIK' => htmlentities($_POST['NIK'])));
+		if($Surveyor->num_rows() == 0){
+			echo "NIK Salah!";
+		}
+		else{
+			$Akun = $Surveyor->result_array();
+			if (password_verify($_POST['Password'], $Akun[0]['Password'])) {
+        $Session = array('Surveyor' => true,
+                         'NIK' => $_POST['NIK'],
+                         'Nama' => $Akun[0]['Nama']);
+				$this->session->set_userdata($Session);
+				echo '1';
+			} else {
+				echo "Password Salah!";
+			}
+		}
+  }
+  
+  public function SurveyorSignOut(){
+		$this->session->sess_destroy();
+		redirect(base_url('IDE/Surveyor'));
 	}
 }
