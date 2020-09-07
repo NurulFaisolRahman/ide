@@ -10,14 +10,14 @@
     <title>Survei</title>
   </head>
   <body>
-    <div class="container mt-1">
-      <div class="row justify-content-sm-center">
-        <div class="col-sm-8">
+    <div class="container-fluid mt-1">
+      <div class="row">
+        <div class="col-sm-auto">
     	    <div class="card border-success">
             <div class="card-header bg-warning border-success"><b>Lokasi Responden</b></div>
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-auto">
                   <div class="input-group my-1">
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Kecamatan</b></label>
@@ -26,7 +26,7 @@
                       <option value=""></option>
                     </select>
                   </div>
-                  <div class="input-group mb-1">
+                  <div class="input-group my-1">
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Desa/Kelurahan</b></label>
                     </div>
@@ -38,30 +38,32 @@
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Alamat</b></label>
                     </div>
-                    <input class="form-control" type="text" id="id" placeholder="Nama Jalan/Gang, RT/RW, Dusun">
+                    <input class="form-control" type="text" id="Alamat" placeholder="Jalan/Gang, RT/RW, Dusun">
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-8 my-1">
+      </div>
+      <div class="row">
+      <div class="col-sm-auto mt-1">
           <div class="card border-success">
             <div class="card-header bg-warning border-success"><b>Anggota Rumah Tangga</b></div>
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-auto">
                   <div class="input-group my-1">
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Nama Anggota</b></label>
                     </div>
-                    <input class="form-control" type="text" id="id">
+                    <input class="form-control" type="text" id="NamaAnggota">
                   </div>
                   <div class="input-group my-1">
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Status Anggota</b></label>
                     </div>
-                    <input class="form-control" type="text" id="id">
+                    <input class="form-control" type="text" id="StatusAnggota">
                   </div>
                   <div class="input-group mb-1">
                     <div class="input-group-prepend">
@@ -76,13 +78,13 @@
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Usia</b></label>
                     </div>
-                    <input class="form-control" type="text" id="id">
+                    <input class="form-control" type="text" id="Usia">
                   </div>
                   <div class="input-group mb-1">
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Pendapatan Bersih Per Bulan</b></label>
                     </div>
-                    <input class="form-control" type="text" id="id">
+                    <input class="form-control" type="text" id="Pendapatan">
                   </div>
                   <div class="input-group mb-1">
                     <div class="input-group-prepend">
@@ -106,7 +108,7 @@
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Pertolongan Saat Di Lahirkan</b></label>
                     </div>
-                    <select class="custom-select" id="Gender">                    
+                    <select class="custom-select" id="PertolonganKelahiran">                    
                       <option value="1">Dokter</option>
                       <option value="2">Bidan</option>
                       <option value="3">Tenaga Medis Lainnya</option>
@@ -119,7 +121,7 @@
                     <div class="input-group-prepend">
                       <label class="input-group-text bg-warning text-dark"><b>Pernah diberi ASI</b></label>
                     </div>
-                    <select class="custom-select" id="Gender">                    
+                    <select class="custom-select" id="Asi">                    
                       <option value="1">Ya</option>
                       <option value="2">Tidak</option>
                     </select>
