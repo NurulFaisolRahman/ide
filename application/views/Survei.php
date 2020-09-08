@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="row">
-      <div class="col-sm-auto mt-1">
+        <div class="col-sm-auto mt-1">
           <div class="card border-success">
             <div class="card-header bg-warning border-success"><b>Anggota Rumah Tangga</b></div>
             <div class="container-fluid">

@@ -19,7 +19,18 @@ class Surveyor extends CI_Controller {
   
   public function Survei(){
     $Data['Halaman'] = 'Survei';
+    $Data['Kecamatan'] = $this->db->query("SELECT * FROM `KodeWilayah` WHERE Kode LIKE '35.10.%' AND length(Kode) = 8")->result_array();
+    $Data['Desa'] = $this->db->query("SELECT * FROM `KodeWilayah` WHERE Kode LIKE '35.10.01.%'")->result_array();
     $this->load->view('Surveyor/Header',$Data);
     $this->load->view('Surveyor/Survei',$Data);
+  }
+
+  function Desa(){
+    $Desa = $this->db->query("SELECT * FROM `KodeWilayah` WHERE Kode LIKE "."'".$_POST['Kode'].".%"."'")->result_array();
+    $OpsiDesa = "";
+    foreach ($Desa as $key) {
+      $OpsiDesa .= "<option value='".$key['Kode']."'>".$key['Nama']."</option>";
+    }
+    echo $OpsiDesa;
   }
 }
