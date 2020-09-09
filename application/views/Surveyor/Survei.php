@@ -2,6 +2,7 @@
       <!-- Main content -->
         <section class="content">
           <div class="container-fluid border border-warning rounded bg-light mt-2">
+            <div class="container-fluid border border-danger rounded bg-light my-1">
             <div class="row">
               <div class="col-sm-3 my-1">
                 <div class="input-group">
@@ -44,9 +45,11 @@
                 </div>
               </div>
             </div>
+            </div>
+            <div class="container-fluid border border-success rounded bg-light mb-1">
             <div class="row">
               <div class="col-sm-12">
-                <div class="table-responsive my-1">
+                <div class="table-responsive mt-1">
                   <table id="TabelSurveyor" class="table table-bordered table-striped">
                     <thead class="bg-primary">
                       <tr>
@@ -101,8 +104,8 @@
                     <label class="input-group-text bg-warning text-dark"><b>Jenis Kelamin</b></label>
                   </div>
                   <select class="custom-select" id="Gender">                    
-                    <option value="">Laki-Laki</option>
-                    <option value="">Perempuan</option>
+                    <option value="1">Laki-Laki</option>
+                    <option value="2">Perempuan</option>
                   </select>
                 </div>
               </div>
@@ -342,6 +345,103 @@
               <button type="button" class="btn btn-primary text-light" id="SimpanResponden"><i class="fa fa-plus"></i> <b>Simpan</b></button> 
               </div>
             </div>
+            </div>
+            <div class="container-fluid border border-primary rounded bg-light my-1">
+            <div class="row">
+              <div class="col-sm-6 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>Usia Istri Saat Pernikahan Pertama</b></label>
+                  </div>
+                  <input class="form-control" type="text" id="UsiaMenikah">
+                  <label class="input-group-text bg-warning text-dark"><b>Tahun</b></label>
+                </div>
+              </div> 
+              <div class="col-sm-6 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>Jumlah Tahun Dalam Ikatan Pernikahan</b></label>
+                  </div>
+                  <input class="form-control" type="text" id="UsiaPernikahan">
+                  <label class="input-group-text bg-warning text-dark"><b>Tahun</b></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="table-responsive mt-1">
+                  <table class="table table-bordered table-striped">
+                    <thead class="bg-primary">
+                      <tr>
+                        <th class="text-center align-middle">No</th>
+                        <th class="align-middle">Anak Ke</th>
+                        <th class="align-middle">Anak Lahir Hidup</th>
+                        <th class="align-middle">Anak Masih Hidup</th>
+                        <th class="align-middle">Anak Sudah Meninggal</th>
+                        <th class="align-middle">Usia</th>
+                        <th class="text-center align-middle">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody id="Fertilitas"></tbody>
+                  </table>
+                </div> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>A.K Lahir Hidup</b></label>
+                  </div>
+                  <select class="custom-select" id="AnakLahirHidup">                    
+                    <option value="1">Ya</option>
+                    <option value="2">Tidak</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>A.K Masih Hidup</b></label>
+                  </div>
+                  <select class="custom-select" id="AnakMasihHidup">                    
+                    <option value="1">Ya</option>
+                    <option value="2">Tidak</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>A.K Sudah Wafat</b></label>
+                  </div>
+                  <select class="custom-select" id="AnakSudahMeninggal">                    
+                    <option value="1">Ya</option>
+                    <option value="2">Tidak</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>Usia Anak</b></label>
+                  </div>
+                  <input class="form-control" type="text" id="UsiaAnak">
+                  <button type="button" class="btn btn-primary text-light" id="SimpanFertilitas"><i class="fa fa-plus"></i> <b>Simpan</b></button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-sm-3 my-1">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text bg-warning text-dark"><b>Usia Anak</b></label>
+                  </div>
+                  <input class="form-control" type="text" id="UsiaAnak">
+                </div>
+              </div>
+            </div> -->
+            </div>
           </div>
         </section>
       </div>
@@ -362,29 +462,126 @@
           })    
         })
 
-        var KK = []
-        var Responden = {}
-        Responden['Nama'] = $('#NamaAnggota').val()
-        Responden['Status'] = $('#StatusAnggota').val()
-        Responden['Gender'] = $('#Gender').val()
-        Responden['Usia'] = $('#Usia').val()
-        KK.push(Responden)	
+        var Status = ['Suami','Istri','Anak Ke 1','Anak Ke 2','Anak Ke 3','Anak Ke 4','Anak Ke 5','Anak Ke 6','Anak Ke 7','Anak Ke 8','Anak Ke 9','Anak Ke 10','Anak Ke 11','Anak Ke 12']
+        var Gender = ['Laki-Laki','Perempuan']
 
-        var	rows = '';
-        $.each(KK.reverse(), function(key,value) {
-          rows = rows + '<tr>';
-          rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-          rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
-          rows = rows + '<td class="align-middle">'+value.Status+'</td>';
-          rows = rows + '<td class="align-middle">'+value.Gender+'</td>';
-          rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
-          rows = rows + '<td class="text-center align-middle">';
-            rows = rows + '<button Edit="1" class="btn btn-sm btn-warning Edit"><i class="fas fa-edit"></i></button>';
-            rows = rows + '<button Hapus="1" class="btn btn-sm btn-danger Hapus"><i class="fas fa-trash"></i></button>';
-          rows = rows + '</td>';
-          rows = rows + '</tr>';
+        var KK = []
+
+        $("#SimpanResponden").click(function() {
+          var Responden = {}
+          Responden['Nama'] = $('#NamaAnggota').val()
+          Responden['Status'] = $('#StatusAnggota').val()
+          Responden['Gender'] = $('#Gender').val()
+          Responden['Usia'] = $('#Usia').val()
+          KK.push(Responden)	
+          var	rows = ''
+          $.each(KK, function(key,value) {
+            rows = rows + '<tr>';
+            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+            rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
+            rows = rows + '<td class="align-middle">'+Status[value.Status-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+Gender[value.Gender-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
+            rows = rows + '<td class="text-center align-middle">';
+              rows = rows + '<button Edit="'+key+'" class="btn btn-sm btn-warning mr-1 Edit"><i class="fas fa-edit"></i></button>';
+              rows = rows + '<button Hapus="'+key+'" class="btn btn-sm btn-danger ml-1 Hapus"><i class="fas fa-trash"></i></button>';
+            rows = rows + '</td>';
+            rows = rows + '</tr>';
+          })
+          $("#KK").html(rows)
         })
-        $("#KK").html(rows);
+
+        $(document).on("click",".Edit",function(){
+          var Edit = KK[$(this).attr('Edit')]
+          $('#NamaAnggota').val(Edit.Nama)
+          $('#StatusAnggota').val(Edit.Status)
+          $('#Gender').val(Edit.Gender)
+          $('#Usia').val(Edit.Usia)
+        })
+
+        $(document).on("click",".Hapus",function(){
+          var Hapus = $(this).attr('Hapus')
+					var Konfirmasi = confirm("Yakin Ingin Menghapus?")
+      		if (Konfirmasi == true) {
+            KK.splice(Hapus,1)
+            var	rows = '';
+            $.each(KK, function(key,value) {
+              rows = rows + '<tr>';
+              rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+              rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
+              rows = rows + '<td class="align-middle">'+Status[value.Status-1]+'</td>';
+              rows = rows + '<td class="align-middle">'+Gender[value.Gender-1]+'</td>';
+              rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
+              rows = rows + '<td class="text-center align-middle">';
+                rows = rows + '<button Edit="1" class="btn btn-sm btn-warning mr-1 Edit"><i class="fas fa-edit"></i></button>';
+                rows = rows + '<button Hapus="'+key+'" class="btn btn-sm btn-danger ml-1 Hapus"><i class="fas fa-trash"></i></button>';
+              rows = rows + '</td>';
+              rows = rows + '</tr>';
+            })
+            $("#KK").html(rows);
+					}
+        })
+        
+        var Fertilitas = []
+        var OpsiFertilitas = ['Ya','Tidak']
+
+        $("#SimpanFertilitas").click(function() {
+          var Anak = {}
+          Anak['AnakLahirHidup'] = $('#AnakLahirHidup').val()
+          Anak['AnakMasihHidup'] = $('#AnakMasihHidup').val()
+          Anak['AnakSudahMeninggal'] = $('#AnakSudahMeninggal').val()
+          Anak['UsiaAnak'] = $('#UsiaAnak').val()
+          Fertilitas.push(Anak)	
+          var	rows = ''
+          $.each(Fertilitas, function(key,value) {
+            rows = rows + '<tr>';
+            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakLahirHidup-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakMasihHidup-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakSudahMeninggal-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+value.UsiaAnak+'</td>';
+            rows = rows + '<td class="text-center align-middle">';
+              rows = rows + '<button EditFertilitas="'+key+'" class="btn btn-sm btn-warning mr-1 EditFertilitas"><i class="fas fa-edit"></i></button>';
+              rows = rows + '<button HapusFertilitas="'+key+'" class="btn btn-sm btn-danger ml-1 HapusFertilitas"><i class="fas fa-trash"></i></button>';
+            rows = rows + '</td>';
+            rows = rows + '</tr>';
+          })
+          $("#Fertilitas").html(rows)
+        })
+
+        $(document).on("click",".EditFertilitas",function(){
+          var Edit = Fertilitas[$(this).attr('EditFertilitas')]
+          $('#AnakLahirHidup').val(Edit.AnakLahirHidup)
+          $('#AnakMasihHidup').val(Edit.AnakMasihHidup)
+          $('#AnakSudahMeninggal').val(Edit.AnakSudahMeninggal)
+          $('#UsiaAnak').val(Edit.UsiaAnak)
+        })
+
+        $(document).on("click",".HapusFertilitas",function(){
+          var Hapus = $(this).attr('HapusFertilitas')
+					var Konfirmasi = confirm("Yakin Ingin Menghapus?")
+      		if (Konfirmasi == true) {
+            Fertilitas.splice(Hapus,1)
+            var	rows = ''
+          $.each(Fertilitas, function(key,value) {
+            rows = rows + '<tr>';
+            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakLahirHidup-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakMasihHidup-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakSudahMeninggal-1]+'</td>';
+            rows = rows + '<td class="align-middle">'+value.UsiaAnak+'</td>';
+            rows = rows + '<td class="text-center align-middle">';
+              rows = rows + '<button EditFertilitas="'+key+'" class="btn btn-sm btn-warning mr-1 EditFertilitas"><i class="fas fa-edit"></i></button>';
+              rows = rows + '<button HapusFertilitas="'+key+'" class="btn btn-sm btn-danger ml-1 HapusFertilitas"><i class="fas fa-trash"></i></button>';
+            rows = rows + '</td>';
+            rows = rows + '</tr>';
+          })
+          $("#Fertilitas").html(rows)
+					}
+        })
+
       })
     </script>
   </body>
