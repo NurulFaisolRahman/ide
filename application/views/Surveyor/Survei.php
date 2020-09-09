@@ -49,7 +49,7 @@
             <div class="container-fluid border border-success rounded bg-light mb-1">
             <div class="row">
               <div class="col-sm-12">
-                <div class="table-responsive mt-1">
+                <div class="table-resp'ons'ive mt-1">
                   <table id="TabelSurveyor" class="table table-bordered table-striped">
                     <thead class="bg-primary">
                       <tr>
@@ -223,10 +223,10 @@
                     <option value="1">SD/SDLB</option>
                     <option value="2">MI</option>
                     <option value="3">Paket A</option>
-                    <option value="4">SMP/SMLB</option>
+                    <option value="4">SMP/SmlB</option>
                     <option value="5">M.Ts</option>
                     <option value="6">Paket B</option>
-                    <option value="7">SMA/SMLB</option>
+                    <option value="7">SMA/SmlB</option>
                     <option value="8">MA</option>
                     <option value="9">SMK</option>
                     <option value="10">Paket C</option>
@@ -248,10 +248,10 @@
                     <option value="2">SD/SDLB</option>
                     <option value="3">MI</option>
                     <option value="4">Paket A</option>
-                    <option value="5">SMP/SMLB</option>
+                    <option value="5">SMP/SmlB</option>
                     <option value="6">M.Ts</option>
                     <option value="7">Paket B</option>
-                    <option value="8">SMA/SMLB</option>
+                    <option value="8">SMA/SmlB</option>
                     <option value="9">MA</option>
                     <option value="10">SMK</option>
                     <option value="11">Paket C</option>
@@ -369,7 +369,7 @@
             </div>
             <div class="row">
               <div class="col-sm-12">
-                <div class="table-responsive mt-1">
+                <div class="table-resp'ons'ive mt-1">
                   <table class="table table-bordered table-striped">
                     <thead class="bg-primary">
                       <tr>
@@ -431,16 +431,100 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="row">
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Usia Anak</b></label>
+            </div>
+            <div class="container-fluid border border-primary rounded bg-light my-1">
+              <?php $Kesehatan = array('Dokter','Bidan Desa','Polides','Peralatan Persalinan','RS Swasta','Klinik Bersalin Swasta','Puskesmas',
+                                       'Posyandu','Pemeriksaan Kehamilan','Vaksinasi','Pemberian Vitamin','Obat-Obatan','Biaya Persalinan'); 
+              foreach ($Kesehatan as $key => $value) { ?>
+                <div class="row">
+                  <div class="col-sm-3 my-1">
+                    <label class="input-group-text bg-primary text-dark justify-content-center"><b><?=$value?></b></label>
                   </div>
-                  <input class="form-control" type="text" id="UsiaAnak">
+                  <div class="col-sm-auto my-1">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Ketercukupan</b></label>
+                      </div>
+                      <select class="custom-select" id="<?='KetercukupanKesehatan'.($key+1)?>">                    
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Keterlayanan</b></label>
+                      </div>
+                      <select class="custom-select" id="<?='KeterlayananKesehatan'.($key+1)?>">                    
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Prioritas Dikembangkan</b></label>
+                      </div>
+                      <select class="custom-select" id="<?='PrioritasKesehatan'.($key+1)?>">                    
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div> -->
+              <?php }?>
+            </div>
+            <div class="container-fluid border border-primary rounded bg-light my-1">
+              <?php $Pendidikan = array('Gedung Sekolah','Ruang Kelas','Guru','Buku Pelajaran','Jarak','Sekolah Swasta','Biaya Sekolah'); 
+              foreach ($Pendidikan as $key => $value) { ?>
+                <div class="row">
+                  <div class="col-sm-3 my-1">
+                    <label class="input-group-text bg-primary text-dark justify-content-center"><b><?=$value?></b></label>
+                  </div>
+                  <div class="col-sm-auto my-1">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Ketercukupan</b></label>
+                      </div>
+                      <select class="custom-select" id="<?='KetercukupanPendidikan'.($key+1)?>">                    
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Keterlayanan</b></label>
+                      </div>
+                      <select class="custom-select" id="<?='KeterlayananPendidikan'.($key+1)?>">                    
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Prioritas Dikembangkan</b></label>
+                      </div>
+                      <select class="custom-select" id="<?='PrioritasPendidikan'.($key+1)?>">                    
+                        <option value="1">Ya</option>
+                        <option value="2">Tidak</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              <?php }?>
+            </div>
+            <div class="container-fluid border border-primary rounded bg-light my-1">
+              <?php $Komoditas = array('Beras','Tepung terigu','Ketela pohon/singkong','Kentang','Tongkol/tuna/cakalang','Kembung','Bandeng','Mujair','Mas','Lele','Ikan segar lainnya','Daging sapi','Daging ayam ras','Daging ayam kampung','Telur ayam ras','Susu kental manis','Susu bubuk','Susu bubuk bayi','Bayam','Kangkung','Kacang panjang','Bawang merah','Bawang putih','Cabe merah','Cabe rawit','Tahu','Tempe','Jeruk','Mangga','Salak','Pisang ambon','Pisang raja','Pisang lainnya','Pepaya','Minyak kelapa','Minyak goreng lainnya','Kelapa','Gula pasir','Teh','Kopi','Garam','Kecap','Penyedap masakan/vetsin','Mie instan','Roti manis/roti lainnya','Kue kering','Kue basah','Makanan gorengan','Gado-gado/ketoprak','Nasi campur/rames','Nasi goreng','Nasi putih','Lontong/ketupat sayur','Soto/gule/sop/rawon/cincang','Sate/tongseng','Mie bakso/mie rebus/mie goreng','Makanan ringan anak','Ikang (goreng/bakar dll)','Ayam/daging (goreng dll)','Makanan jadi lainnya','Air kemasan galon','Minuman jadi lainnya','Es lainnya','Roko kretek filter','Rokok kretek tanpa filter','Rokok putih','Perawatan rumah sendiri/bebas sewa','Rumah kontrak','Rumah sewa','Rumah dinas','Listrik','Air PAM','LPG','Minyak tanah','Lainnya(batu baterai,aki,korek,obat nyamuk dll)','Perlengkapan mandi','Barang kecantikan','Perawatan kulit,muka,kuku,rambut','Sabun cuci','Biaya RS Pemerintah','Biaya RS Swasta','Puskesmas/pustu','Praktek dokter/poliklinik','SPP','Bensin','Transportasi/pengangkutan umum','Pos dan Telekomunikasi','Pakaian jadi laki-laki dewasa','Pakaian jadi perempuan dewasa','Pakaian jadi anak-anak','Alas kaki','Minyak Pelumas','Meubelair','Peralatan Rumah Tangga','Perlengkapan perabot rumah tangga','Alat-alat Dapur/Makan'); 
+                    $Satuan = array('Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','ml','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Liter','Liter','Butir','ons','ons','ons','ons','ml','ons','Bungkus','Bungkus','ons','buah','Bungkus','Bungkus','Bungkus','Bungkus','Bungkus','Bungkus','Piring','Piring','Piring','Bungkus','Kg','Kg','Bungkus','Gallon','ml','ml','Bungkus','Bungkus','Bungkus','Rp','Rp','Rp','Rp','Rp','M3','Kg','Liter','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Liter','Rp','Rp','Rp','Rp');
+              foreach ($Komoditas as $key => $value) { ?>
+                <div class="row">
+                  <div class="col-sm-5 my-1">
+                    <label class="input-group-text bg-primary text-dark justify-content-center"><b><?=$value.' ('.$Satuan[$key].')'?></b></label>
+                  </div>
+                  <div class="col-sm-auto my-1">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Volume</b></label>
+                      </div>                
+                      <input class="form-control" type="text" id="<?='VolumeKomoditas'.($key+1)?>">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text bg-warning text-dark"><b>Harga</b></label>
+                      </div>
+                      <input class="form-control" type="text" id="<?='HargaKomoditas'.($key+1)?>">
+                    </div>
+                  </div>
+                </div>
+              <?php }?>
             </div>
           </div>
         </section>
