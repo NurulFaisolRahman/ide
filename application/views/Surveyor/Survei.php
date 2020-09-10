@@ -208,33 +208,34 @@
                     <label class="input-group-text bg-warning text-dark"><b>Partisipasi Sekolah</b></label>
                   </div>
                   <select class="custom-select" id="PartisipasiSekolah">                    
-                    <option value="1">Tidak Sekolah</option>
+                    <option value="1">Tidak Pernah Sekolah</option>
                     <option value="2">Masih Sekolah</option>
-                    <option value="3">Pernah Sekolah</option>
+                    <option value="3">Tidak Sekolah Lagi</option>
                   </select>
                 </div>
               </div>
               <div class="col-sm-4 my-1">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pendidikan Tertinggi</b></label>
+                    <label class="input-group-text bg-warning text-dark"><b>Pendidikan Tertinggi</b></label> 
                   </div>
                   <select class="custom-select" id="PendidikanTertinggi">                    
                     <option value="1">SD/SDLB</option>
                     <option value="2">MI</option>
                     <option value="3">Paket A</option>
-                    <option value="4">SMP/SmlB</option>
+                    <option value="4">SMP/SMLB</option>
                     <option value="5">M.Ts</option>
                     <option value="6">Paket B</option>
-                    <option value="7">SMA/SmlB</option>
+                    <option value="7">SMA/SMLB</option>
                     <option value="8">MA</option>
                     <option value="9">SMK</option>
                     <option value="10">Paket C</option>
-                    <option value="11">D1/D2</option>
-                    <option value="12">D3</option>
-                    <option value="13">D4/S1</option>
-                    <option value="14">S2</option>
-                    <option value="15">S3</option>
+                    <option value="11">D1</option>
+                    <option value="12">D2</option>
+                    <option value="13">D3</option>
+                    <option value="14">D4/S1</option>
+                    <option value="15">S2</option>
+                    <option value="16">S3</option>
                   </select>
                 </div>
               </div>
@@ -248,18 +249,19 @@
                     <option value="2">SD/SDLB</option>
                     <option value="3">MI</option>
                     <option value="4">Paket A</option>
-                    <option value="5">SMP/SmlB</option>
+                    <option value="5">SMP/SMLB</option>
                     <option value="6">M.Ts</option>
                     <option value="7">Paket B</option>
-                    <option value="8">SMA/SmlB</option>
+                    <option value="8">SMA/SMLB</option>
                     <option value="9">MA</option>
                     <option value="10">SMK</option>
                     <option value="11">Paket C</option>
-                    <option value="12">D1/D2</option>
-                    <option value="13">D3</option>
-                    <option value="14">D4/S1</option>
-                    <option value="15">S2</option>
-                    <option value="16">S3</option>
+                    <option value="12">D1</option>
+                    <option value="13">D2</option>
+                    <option value="14">D3</option>
+                    <option value="15">D4/S1</option>
+                    <option value="16">S2</option>
+                    <option value="17">S3</option>
                   </select>
                 </div>
               </div>
@@ -281,7 +283,7 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text bg-warning text-dark"><b>Status Sekolah</b></label>
                   </div>
-                  <select class="custom-select" id="Kelas">                    
+                  <select class="custom-select" id="StatusSekolah">                    
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -342,7 +344,7 @@
                 </div>
               </div>
               <div class="col-sm-3 my-1">
-              <button type="button" class="btn btn-primary text-light" id="SimpanResponden"><i class="fa fa-plus"></i> <b>Simpan</b></button> 
+              <button type="button" class="btn btn-primary text-light" id="SimpanResponden"><b>Simpan</b></button> 
               </div>
             </div>
             </div>
@@ -426,8 +428,8 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text bg-warning text-dark"><b>Usia Anak</b></label>
                   </div>
-                  <input class="form-control" type="text" id="UsiaAnak">
-                  <button type="button" class="btn btn-primary text-light" id="SimpanFertilitas"><i class="fa fa-plus"></i> <b>Simpan</b></button>
+                  <input class="form-control" type="text" id="UsiaAnak">&emsp;
+                  <button type="button" class="btn btn-primary text-light" id="SimpanFertilitas"><b>Simpan</b></button>
                 </div>
               </div>
             </div>
@@ -612,33 +614,80 @@
           })    
         })
 
+        var KK = []
+        var ModeEditKK = false
+        var IdEditKK = 0
         var Status = ['Suami','Istri','Anak Ke 1','Anak Ke 2','Anak Ke 3','Anak Ke 4','Anak Ke 5','Anak Ke 6','Anak Ke 7','Anak Ke 8','Anak Ke 9','Anak Ke 10','Anak Ke 11','Anak Ke 12']
         var Gender = ['Laki-Laki','Perempuan']
 
-        var KK = []
-
         $("#SimpanResponden").click(function() {
-          var Responden = {}
-          Responden['Nama'] = $('#NamaAnggota').val()
-          Responden['Status'] = $('#StatusAnggota').val()
-          Responden['Gender'] = $('#Gender').val()
-          Responden['Usia'] = $('#Usia').val()
-          KK.push(Responden)	
-          var	rows = ''
-          $.each(KK, function(key,value) {
-            rows = rows + '<tr>';
-            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-            rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
-            rows = rows + '<td class="align-middle">'+Status[value.Status-1]+'</td>';
-            rows = rows + '<td class="align-middle">'+Gender[value.Gender-1]+'</td>';
-            rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
-            rows = rows + '<td class="text-center align-middle">';
-              rows = rows + '<button Edit="'+key+'" class="btn btn-sm btn-warning mr-1 Edit"><i class="fas fa-edit"></i></button>';
-              rows = rows + '<button Hapus="'+key+'" class="btn btn-sm btn-danger ml-1 Hapus"><i class="fas fa-trash"></i></button>';
-            rows = rows + '</td>';
-            rows = rows + '</tr>';
-          })
-          $("#KK").html(rows)
+          if (ModeEditKK) {
+            KK[IdEditKK].Nama = $('#NamaAnggota').val()
+            KK[IdEditKK].Status = $('#StatusAnggota').val()
+            KK[IdEditKK].Gender = $('#Gender').val()
+            KK[IdEditKK].Usia = $('#Usia').val()
+            KK[IdEditKK].Pendapatan = $('#Pendapatan').val()
+            KK[IdEditKK].Pekerjaan = $('#Pekerjaan').val()
+            KK[IdEditKK].PertolonganKelahiran = $('#PertolonganKelahiran').val()
+            KK[IdEditKK].KJK = $('#KJK').val()
+            KK[IdEditKK].ASI = $('#ASI').val()
+            KK[IdEditKK].Imunisasi = $('#Imunisasi').val()
+            KK[IdEditKK].PartisipasiSekolah = $('#PartisipasiSekolah').val()
+            KK[IdEditKK].PendidikanTertinggi = $('#PendidikanTertinggi').val()
+            KK[IdEditKK].IjazahTertinggi = $('#IjazahTertinggi').val()
+            KK[IdEditKK].Santri = $('#Santri').val()
+            KK[IdEditKK].StatusSekolah = $('#StatusSekolah').val()
+            KK[IdEditKK].BacaTulis = $('#BacaTulis').val()
+            KK[IdEditKK].SD = $('#SD').val()
+            KK[IdEditKK].SMP = $('#SMP').val()
+            KK[IdEditKK].SMA = $('#SMA').val()
+            KK[IdEditKK].Universitas = $('#Universitas').val()
+            TabelKK(KK)
+            ModeEditKK = false
+          } else {
+            var Responden = {}
+            Responden['Nama'] = $('#NamaAnggota').val()
+            Responden['Status'] = $('#StatusAnggota').val()
+            Responden['Gender'] = $('#Gender').val()
+            Responden['Usia'] = $('#Usia').val()
+            Responden['Pendapatan'] = $('#Pendapatan').val()
+            Responden['Pekerjaan'] = $('#Pekerjaan').val()
+            Responden['PertolonganKelahiran'] = $('#PertolonganKelahiran').val()
+            Responden['KJK'] = $('#KJK').val()
+            Responden['ASI'] = $('#ASI').val()
+            Responden['Imunisasi'] = $('#Imunisasi').val()
+            Responden['PartisipasiSekolah'] = $('#PartisipasiSekolah').val()
+            Responden['PendidikanTertinggi'] = $('#PendidikanTertinggi').val()
+            Responden['IjazahTertinggi'] = $('#IjazahTertinggi').val()
+            Responden['Santri'] = $('#Santri').val()
+            Responden['StatusSekolah'] = $('#StatusSekolah').val()
+            // if ($('#PendidikanTertinggi').val() < 4) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 6 : $('#StatusSekolah').val()
+            // } else if ($('#PendidikanTertinggi').val() < 7) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 9 : $('#StatusSekolah').val()
+            // } else if ($('#PendidikanTertinggi').val() < 11) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 12 : ($('#StatusSekolah').val()+9)
+            // } else if ($('#PendidikanTertinggi').val() == 11) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 13 : ($('#StatusSekolah').val()+9)
+            // } else if ($('#PendidikanTertinggi').val() == 12) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 14 : ($('#StatusSekolah').val()+9)
+            // } else if ($('#PendidikanTertinggi').val() == 13) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 15 : ($('#StatusSekolah').val()+9)
+            // } else if ($('#PendidikanTertinggi').val() == 14) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 16 : ($('#StatusSekolah').val()+9)
+            // } else if ($('#PendidikanTertinggi').val() == 15) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 18 : ($('#StatusSekolah').val()+9)
+            // } else if ($('#PendidikanTertinggi').val() == 16) {
+            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 12 : ($('#StatusSekolah').val()+9)
+            // }
+            Responden['BacaTulis'] = $('#BacaTulis').val()
+            Responden['SD'] = $('#SD').val()
+            Responden['SMP'] = $('#SMP').val()
+            Responden['SMA'] = $('#SMA').val()
+            Responden['Universitas'] = $('#Universitas').val()
+            KK.push(Responden)	
+            TabelKK(KK)
+          }
         })
 
         $(document).on("click",".Edit",function(){
@@ -647,6 +696,24 @@
           $('#StatusAnggota').val(Edit.Status)
           $('#Gender').val(Edit.Gender)
           $('#Usia').val(Edit.Usia)
+          $('#Pendapatan').val(Edit.Pendapatan)
+          $('#Pekerjaan').val(Edit.Pekerjaan)
+          $('#PertolonganKelahiran').val(Edit.PertolonganKelahiran)
+          $('#KJK').val(Edit.KJK)
+          $('#ASI').val(Edit.ASI)
+          $('#Imunisasi').val(Edit.Imunisasi)
+          $('#PartisipasiSekolah').val(Edit.PartisipasiSekolah)
+          $('#PendidikanTertinggi').val(Edit.PendidikanTertinggi)
+          $('#IjazahTertinggi').val(Edit.IjazahTertinggi)
+          $('#Santri').val(Edit.Santri)
+          $('#StatusSekolah').val(Edit.StatusSekolah)
+          $('#BacaTulis').val(Edit.BacaTulis)
+          $('#SD').val(Edit.SD)
+          $('#SMP').val(Edit.SMP)
+          $('#SMA').val(Edit.SMA)
+          $('#Universitas').val(Edit.Universitas)
+          IdEditAnak = $(this).attr('Edit')
+          ModeEditKK = true
         })
 
         $(document).on("click",".Hapus",function(){
@@ -654,28 +721,13 @@
 					var Konfirmasi = confirm("Yakin Ingin Menghapus?")
       		if (Konfirmasi == true) {
             KK.splice(Hapus,1)
-            var	rows = '';
-            $.each(KK, function(key,value) {
-              rows = rows + '<tr>';
-              rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-              rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
-              rows = rows + '<td class="align-middle">'+Status[value.Status-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+Gender[value.Gender-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
-              rows = rows + '<td class="text-center align-middle">';
-                rows = rows + '<button Edit="1" class="btn btn-sm btn-warning mr-1 Edit"><i class="fas fa-edit"></i></button>';
-                rows = rows + '<button Hapus="'+key+'" class="btn btn-sm btn-danger ml-1 Hapus"><i class="fas fa-trash"></i></button>';
-              rows = rows + '</td>';
-              rows = rows + '</tr>';
-            })
-            $("#KK").html(rows);
+            TabelKK(KK)
 					}
         })
         
         var ModeEditFertilitas = false
         var IdEditAnak = 0
         var Fertilitas = []
-        var OpsiFertilitas = ['Ya','Tidak']
 
         $("#SimpanFertilitas").click(function() {
           if (ModeEditFertilitas) {
@@ -683,22 +735,7 @@
             Fertilitas[IdEditAnak].AnakMasihHidup = $('#AnakMasihHidup').val()
             Fertilitas[IdEditAnak].AnakSudahMeninggal = $('#AnakSudahMeninggal').val()
             Fertilitas[IdEditAnak].UsiaAnak = $('#UsiaAnak').val()
-            var	rows = ''
-            $.each(Fertilitas, function(key,value) {
-              rows = rows + '<tr>';
-              rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-              rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-              rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakLahirHidup-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakMasihHidup-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakSudahMeninggal-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+value.UsiaAnak+'</td>';
-              rows = rows + '<td class="text-center align-middle">';
-                rows = rows + '<button EditFertilitas="'+key+'" class="btn btn-sm btn-warning mr-1 EditFertilitas"><i class="fas fa-edit"></i></button>';
-                rows = rows + '<button HapusFertilitas="'+key+'" class="btn btn-sm btn-danger ml-1 HapusFertilitas"><i class="fas fa-trash"></i></button>';
-              rows = rows + '</td>';
-              rows = rows + '</tr>';
-            })
-            $("#Fertilitas").html(rows) 
+            TabelFertilitas(Fertilitas)
             $('#AnakLahirHidup').val(1)
             $('#AnakMasihHidup').val(1)
             $('#AnakSudahMeninggal').val(1)
@@ -711,22 +748,7 @@
             Anak['AnakSudahMeninggal'] = $('#AnakSudahMeninggal').val()
             Anak['UsiaAnak'] = $('#UsiaAnak').val()
             Fertilitas.push(Anak)	
-            var	rows = ''
-            $.each(Fertilitas, function(key,value) {
-              rows = rows + '<tr>';
-              rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-              rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-              rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakLahirHidup-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakMasihHidup-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakSudahMeninggal-1]+'</td>';
-              rows = rows + '<td class="align-middle">'+value.UsiaAnak+'</td>';
-              rows = rows + '<td class="text-center align-middle">';
-                rows = rows + '<button EditFertilitas="'+key+'" class="btn btn-sm btn-warning mr-1 EditFertilitas"><i class="fas fa-edit"></i></button>';
-                rows = rows + '<button HapusFertilitas="'+key+'" class="btn btn-sm btn-danger ml-1 HapusFertilitas"><i class="fas fa-trash"></i></button>';
-              rows = rows + '</td>';
-              rows = rows + '</tr>';
-            })
-            $("#Fertilitas").html(rows) 
+            TabelFertilitas(Fertilitas)
           }
         })
 
@@ -745,26 +767,51 @@
 					var Konfirmasi = confirm("Yakin Ingin Menghapus?")
       		if (Konfirmasi == true) {
             Fertilitas.splice(Hapus,1)
-            var	rows = ''
-          $.each(Fertilitas, function(key,value) {
-            rows = rows + '<tr>';
-            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-            rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
-            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakLahirHidup-1]+'</td>';
-            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakMasihHidup-1]+'</td>';
-            rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakSudahMeninggal-1]+'</td>';
-            rows = rows + '<td class="align-middle">'+value.UsiaAnak+'</td>';
-            rows = rows + '<td class="text-center align-middle">';
-              rows = rows + '<button EditFertilitas="'+key+'" class="btn btn-sm btn-warning mr-1 EditFertilitas"><i class="fas fa-edit"></i></button>';
-              rows = rows + '<button HapusFertilitas="'+key+'" class="btn btn-sm btn-danger ml-1 HapusFertilitas"><i class="fas fa-trash"></i></button>';
-            rows = rows + '</td>';
-            rows = rows + '</tr>';
-          })
-          $("#Fertilitas").html(rows)
+            TabelFertilitas(Fertilitas)
 					}
         })
 
       })
+
+      function TabelKK(kk) {
+        var Status = ['Suami','Istri','Anak Ke 1','Anak Ke 2','Anak Ke 3','Anak Ke 4','Anak Ke 5','Anak Ke 6','Anak Ke 7','Anak Ke 8','Anak Ke 9','Anak Ke 10','Anak Ke 11','Anak Ke 12']
+        var Gender = ['Laki-Laki','Perempuan']
+        var	rows = '';
+        $.each(kk, function(key,value) {
+          rows = rows + '<tr>';
+          rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+          rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
+          rows = rows + '<td class="align-middle">'+Status[value.Status-1]+'</td>';
+          rows = rows + '<td class="align-middle">'+Gender[value.Gender-1]+'</td>';
+          rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
+          rows = rows + '<td class="text-center align-middle">';
+            rows = rows + '<button Edit="'+key+'" class="btn btn-sm btn-warning mr-1 Edit"><i class="fas fa-edit"></i></button>';
+            rows = rows + '<button Hapus="'+key+'" class="btn btn-sm btn-danger ml-1 Hapus"><i class="fas fa-trash"></i></button>';
+          rows = rows + '</td>';
+          rows = rows + '</tr>';
+        })
+        $("#KK").html(rows)
+      }
+
+      function TabelFertilitas(fertilitas) {
+        var OpsiFertilitas = ['Ya','Tidak']
+        var	rows = ''
+        $.each(fertilitas, function(key,value) {
+          rows = rows + '<tr>';
+          rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+          rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
+          rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakLahirHidup-1]+'</td>';
+          rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakMasihHidup-1]+'</td>';
+          rows = rows + '<td class="align-middle">'+OpsiFertilitas[value.AnakSudahMeninggal-1]+'</td>';
+          rows = rows + '<td class="align-middle">'+value.UsiaAnak+'</td>';
+          rows = rows + '<td class="text-center align-middle">';
+            rows = rows + '<button EditFertilitas="'+key+'" class="btn btn-sm btn-warning mr-1 EditFertilitas"><i class="fas fa-edit"></i></button>';
+            rows = rows + '<button HapusFertilitas="'+key+'" class="btn btn-sm btn-danger ml-1 HapusFertilitas"><i class="fas fa-trash"></i></button>';
+          rows = rows + '</td>';
+          rows = rows + '</tr>';
+        })
+        $("#Fertilitas").html(rows)
+      }
     </script>
   </body>
 </html>
