@@ -1,8 +1,7 @@
 <div class="content-wrapper">
       <!-- Main content -->
         <section class="content">
-          <div class="container-fluid border border-warning rounded bg-light mt-2">
-            <div class="container-fluid border border-danger rounded bg-light my-1">
+            <!-- <div class="container bg-light">
             <div class="row">
               <div class="col-sm-3 my-1">
                 <div class="input-group">
@@ -45,310 +44,477 @@
                 </div>
               </div>
             </div>
-            </div>
-            <div class="container-fluid border border-success rounded bg-light mb-1 mt-3">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="table-resp'ons'ive mt-1">
-                  <table id="TabelSurveyor" class="table table-bordered table-striped">
-                    <thead class="bg-primary">
-                      <tr>
-                        <th class="text-center align-middle">No</th>
-                        <th class="align-middle">Nama</th>
-                        <th class="align-middle">Status</th>
-                        <th class="align-middle">Jenis Kelamin</th>
-                        <th class="align-middle">Usia</th>
-                        <th class="text-center align-middle">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody id="KK"></tbody>
-                  </table>
-                </div> 
+            </div> -->
+            <div class="card mt-2">
+              <div class="card-header bg-primary my-0">
+                <b>Lokasi Responden</b>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Nama Anggota</b></label>
+              <div class="card-body border border-primary">
+                <div class="container bg-light">
+                  <div class="row">
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Nomor KK</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="NomorKK" placeholder="Nomor KK">
+                      </div>
+                    </div> 
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Provinsi</b></label>
+                        </div>
+                        <select class="custom-select" id="Provinsi">  
+                          <?php foreach ($Provinsi as $key) { ?>
+                            <option value="<?=$key['Kode']?>"><?=$key['Nama']?></option>
+                          <?php } ?>                  
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Kabupaten</b></label>
+                        </div>
+                        <select class="custom-select" id="Kabupaten">                    
+                          <?php foreach ($Kabupaten as $key) { ?>
+                            <option value="<?=$key['Kode']?>"><?=$key['Nama']?></option>
+                          <?php } ?>                  
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Kecamatan</b></label>
+                        </div>
+                        <select class="custom-select" id="Kecamatan">  
+                          <?php foreach ($Kecamatan as $key) { ?>
+                            <option value="<?=$key['Kode']?>"><?=$key['Nama']?></option>
+                          <?php } ?>                  
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Desa/Kelurahan</b></label>
+                        </div>
+                        <select class="custom-select" id="Desa">                    
+                          <?php foreach ($Desa as $key) { ?>
+                            <option value="<?=$key['Kode']?>"><?=$key['Nama']?></option>
+                          <?php } ?>                  
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Alamat</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="Alamat" placeholder="Jl/Gg, RT/RW, Dusun">
+                      </div>
+                    </div>
                   </div>
-                  <input class="form-control" type="text" id="NamaAnggota">
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Status Anggota</b></label>
-                  </div>
-                  <select class="custom-select" id="StatusAnggota">                    
-                    <option value="1">Suami</option>
-                    <option value="2">Istri</option>
-                    <option value="3">Anak Ke 1</option>
-                    <option value="4">Anak Ke 2</option>
-                    <option value="5">Anak Ke 3</option>
-                    <option value="6">Anak Ke 4</option>
-                    <option value="7">Anak Ke 5</option>
-                    <option value="8">Anak Ke 6</option>
-                    <option value="9">Anak Ke 7</option>
-                    <option value="10">Anak Ke 8</option>
-                    <option value="11">Anak Ke 9</option>
-                    <option value="12">Anak Ke 10</option>
-                    <option value="13">Anak Ke 11</option>
-                    <option value="14">Anak Ke 12</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Jenis Kelamin</b></label>
-                  </div>
-                  <select class="custom-select" id="Gender">                    
-                    <option value="1">Laki-Laki</option>
-                    <option value="2">Perempuan</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-2 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Usia</b></label>
-                  </div>
-                  <input class="form-control" type="text" id="Usia">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pendapatan Bersih Per Bulan</b></label>
-                  </div>
-                  <input class="form-control" type="text" id="Pendapatan">
-                </div>
-              </div>
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pekerjaan</b></label>
-                  </div>
-                  <select class="custom-select" id="Pekerjaan">                    
-                    <option value="1">Pegawai level bawah (staff, Pegawai negeri gol II, Tentara gol letnan bawah)</option>
-                    <option value="2">Pegawai golongan menengah (Kabag, Manager, Direktur, PNS gol III Keatas, Tentara Pangkat Kapten Keatas, Dosen)</option>
-                    <option value="3">Profesional (Dokter, Pengacara, Notaris, Seniman dll)</option>
-                    <option value="4">Wiraswasta / Pedagang Besar (Karyawan > 10 orang)</option>
-                    <option value="5">Wiraswasta / Pedagang Besar (Karyawan > 10 orang)</option>
-                    <option value="6">Mahasiswa / Pelajar</option>
-                    <option value="7">Pekerja Terlatih (Salesman, Teknisi, montir, Tukang bangunan, tukang kayu, dll)</option>
-                    <option value="8">Pekerjaan tidak terlatih (Buruh tani, tukang becak, penjaga toko dll)</option>
-                    <option value="9">Pemilik usaha (Petani, petambak, Peternak dll)</option>
-                    <option value="10">Pensiunan</option>
-                    <option value="11">Tidak Bekerja</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pertolongan Saat Di Lahirkan</b></label>
-                  </div>
-                  <select class="custom-select" id="PertolonganKelahiran">                    
-                    <option value="1">Dokter</option>
-                    <option value="2">Bidan</option>
-                    <option value="3">Tenaga Medis Lainnya</option>
-                    <option value="4">Dukun Bersalin</option>
-                    <option value="5">Family</option>
-                    <option value="6">lainnya</option>
-                  </select>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-5 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Memiliki Kartu jaminan Kesehatan</b></label>
-                  </div>
-                  <select class="custom-select" id="KJK">                    
-                    <option value="0">NA</option>
-                    <option value="1">BPJS</option>
-                    <option value="2">Jamkesda</option>
-                    <option value="3">Asuransi Swasta</option>
-                    <option value="4">lainnya</option>
-                  </select>
+            <!-- <div class="card">
+              <div class="card-header bg-primary my-0"><b>Lokasi Responden</b></div>
+                <div class="card-body border border-primary">
+            
                 </div>
               </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pernah diberi ASI</b></label>
-                  </div>
-                  <select class="custom-select" id="Asi">                    
-                    <option value="1">Ya</option>
-                    <option value="2">Tidak</option>
-                  </select>
-                </div>
+            </div> -->
+            <div class="card">
+              <div class="card-header bg-primary my-0">
+                <b>Informasi Anggota Keluarga (Ditanyakan Untuk Semua Anggota Keluarga)</b>
               </div>
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pernah mendapat Imunisasi</b></label>
+              <div class="card-body border border-primary">
+                <div class="container bg-light">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="table-resp'ons'ive mt-1">
+                        <table id="TabelSurveyor" class="table table-bordered table-striped">
+                          <thead class="bg-success">
+                            <tr>
+                              <th class="text-center align-middle">No</th>
+                              <th class="align-middle">Nama</th>
+                              <th class="align-middle">Status</th>
+                              <th class="align-middle">Jenis Kelamin</th>
+                              <th class="align-middle">Usia</th>
+                              <th class="text-center align-middle">Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody id="KK"></tbody>
+                        </table>
+                      </div> 
+                    </div>
                   </div>
-                  <select class="custom-select" id="Imunisasi">                    
-                    <option value="1">Ya</option>
-                    <option value="2">Tidak</option>
-                  </select>
+                  <div class="row">
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>NIK</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="NIK" placeholder="Nomor Induk Keluarga">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Nama Anggota</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="NamaAnggota">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Jenis Kelamin</b></label>
+                        </div>
+                        <select class="custom-select" id="Gender">                    
+                          <option value="1">Laki-Laki</option>
+                          <option value="2">Perempuan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Usia</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="Usia">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Status Anggota</b></label>
+                        </div>
+                        <select class="custom-select" id="StatusAnggota">                    
+                          <option value="1">Suami</option>
+                          <option value="2">Istri</option>
+                          <option value="3">Anak Ke 1</option>
+                          <option value="4">Anak Ke 2</option>
+                          <option value="5">Anak Ke 3</option>
+                          <option value="6">Anak Ke 4</option>
+                          <option value="7">Anak Ke 5</option>
+                          <option value="8">Anak Ke 6</option>
+                          <option value="9">Anak Ke 7</option>
+                          <option value="10">Anak Ke 8</option>
+                          <option value="11">Anak Ke 9</option>
+                          <option value="12">Anak Ke 10</option>
+                          <option value="13">Anak Ke 11</option>
+                          <option value="14">Anak Ke 12</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Status Perkawinan</b></label>
+                        </div>
+                        <select class="custom-select" id="StatusAnggota">                    
+                          <option value="1">Belum Kawin</option>
+                          <option value="2">Kawin</option>
+                          <option value="3">Cerai Hidup</option>
+                          <option value="4">Cerai Mati</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Pendapatan Bersih Per Bulan</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="Pendapatan">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Pekerjaan</b></label>
+                        </div>
+                        <select class="custom-select" id="Pekerjaan">         
+                          <option value="11">Tidak Bekerja</option>           
+                          <option value="1">Pegawai level bawah (staff, Pegawai negeri gol II, Tentara gol letnan bawah)</option>
+                          <option value="2">Pegawai golongan menengah (Kabag,Manager,Direktur,PNS gol III Keatas,Tentara Pangkat Kapten Keatas,Dosen)</option>
+                          <option value="3">Profesional (Dokter, Pengacara, Notaris, Seniman dll)</option>
+                          <option value="4">Wiraswasta / Pedagang Besar (Karyawan > 10 orang)</option>
+                          <option value="5">Wiraswasta / Pedagang Besar (Karyawan > 10 orang)</option>
+                          <option value="6">Mahasiswa / Pelajar</option>
+                          <option value="7">Pekerja Terlatih (Salesman, Teknisi, montir, Tukang bangunan, tukang kayu, dll)</option>
+                          <option value="8">Pekerjaan tidak terlatih (Buruh tani, tukang becak, penjaga toko dll)</option>
+                          <option value="9">Pemilik usaha (Petani, petambak, Peternak dll)</option>
+                          <option value="10">Pensiunan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Jenis Pekerjaan</b></label>
+                        </div>
+                        <select class="custom-select" id="JenisPekerjaan">         
+                          <option value="1">Tidak Bekerja</option>           
+                          <option value="2">Berusaha Sendiri</option>
+                          <option value="3">Dibantu Buruh Tidak Tetap / Tidak Dibayar</option>
+                          <option value="4">Dibantu Buruh Tidak Tetap / Dibayar</option>
+                          <option value="5">Buruh / Karyawan / Pegawai</option>           
+                          <option value="6">Pekerja Bebas Di Pertanian</option>
+                          <option value="7">Pekerja Bebas Di Non Pertanian</option>
+                          <option value="8">Pekerja Keluarga/Tidak Dibayar</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Jam Kerja</b></label>
+                        </div>
+                        <select class="custom-select" id="Jam Kerja">    
+                          <?php for ($i=0; $i < 25; $i++) { ?>
+                            <option value="<?=$i?>"><?=$i.' Jam'?></option>           
+                          <?php } ?>          
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Keahlian Yang Dimiliki</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="Keahlian">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Kegiatan Seminggu Lalu</b></label>
+                        </div>
+                        <select class="custom-select" id="KegiatanSeminggu">         
+                          <option value="1">Tidak Bekerja</option>  
+                          <option value="2">Bekerja</option>           
+                          <option value="3">Bersekolah</option>
+                          <option value="4">Mengurus Rumah Tangga</option>
+                          <option value="5">Mencari Pekerjaan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Alasan Mencari Kerja</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="AlasanMencariKerja">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Lokasi Bekerja</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="LokasiKerja">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Pertolongan Saat Di Lahirkan</b></label>
+                        </div>
+                        <select class="custom-select" id="PertolonganKelahiran">                    
+                          <option value="1">Dokter</option>
+                          <option value="2">Bidan</option>
+                          <option value="3">Tenaga Medis Lainnya</option>
+                          <option value="4">Dukun Bersalin</option>
+                          <option value="5">Family</option>
+                          <option value="6">lainnya</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Memiliki Kartu jaminan Kesehatan</b></label>
+                        </div>
+                        <select class="custom-select" id="KJK">                    
+                          <option value="0">NA</option>
+                          <option value="1">BPJS</option>
+                          <option value="2">Jamkesda</option>
+                          <option value="3">Asuransi Swasta</option>
+                          <option value="4">lainnya</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Pernah diberi ASI</b></label>
+                        </div>
+                        <select class="custom-select" id="Asi">                    
+                          <option value="1">Ya</option>
+                          <option value="2">Tidak</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Pernah mendapat Imunisasi</b></label>
+                        </div>
+                        <select class="custom-select" id="Imunisasi">                    
+                          <option value="1">Ya</option>
+                          <option value="2">Tidak</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Partisipasi Sekolah</b></label>
+                        </div>
+                        <select class="custom-select" id="PartisipasiSekolah">                    
+                          <option value="1">Tidak Pernah Sekolah</option>
+                          <option value="2">Masih Sekolah</option>
+                          <option value="3">Tidak Sekolah Lagi</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Pendidikan Tertinggi</b></label> 
+                        </div>
+                        <select class="custom-select" id="PendidikanTertinggi">                    
+                          <option value="1">SD/SDLB</option>
+                          <option value="2">MI</option>
+                          <option value="3">Paket A</option>
+                          <option value="4">SMP/SMLB</option>
+                          <option value="5">M.Ts</option>
+                          <option value="6">Paket B</option>
+                          <option value="7">SMA/SMLB</option>
+                          <option value="8">MA</option>
+                          <option value="9">SMK</option>
+                          <option value="10">Paket C</option>
+                          <option value="11">D1</option>
+                          <option value="12">D2</option>
+                          <option value="13">D3</option>
+                          <option value="14">D4/S1</option>
+                          <option value="15">S2</option>
+                          <option value="16">S3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Kelas Yang Pernah/Sedang Diduduki</b></label>
+                        </div>
+                        <select class="custom-select" id="StatusSekolah">                    
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">Tamat</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Santri Aktif</b></label>
+                        </div>
+                        <select class="custom-select" id="Santri">                    
+                          <option value="1">Ya</option>
+                          <option value="2">Tidak</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Ijazah Tertinggi</b></label>
+                        </div>
+                        <select class="custom-select" id="IjazahTertinggi">                    
+                          <option value="1">Tdk Punya Ijazah</option>
+                          <option value="2">SD/SDLB</option>
+                          <option value="3">MI</option>
+                          <option value="4">Paket A</option>
+                          <option value="5">SMP/SMLB</option>
+                          <option value="6">M.Ts</option>
+                          <option value="7">Paket B</option>
+                          <option value="8">SMA/SMLB</option>
+                          <option value="9">MA</option>
+                          <option value="10">SMK</option>
+                          <option value="11">Paket C</option>
+                          <option value="12">D1</option>
+                          <option value="13">D2</option>
+                          <option value="14">D3</option>
+                          <option value="15">D4/S1</option>
+                          <option value="16">S2</option>
+                          <option value="17">S3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Bisa Baca Tulis</b></label>
+                        </div>
+                        <select class="custom-select" id="BacaTulis">                    
+                          <option value="1">Huruf Latin</option>
+                          <option value="2">Huruf Arab</option>
+                          <option value="3">Huruf Lain</option>
+                          <option value="4">All</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>SD</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="SD" placeholder="Nama Sekolah/Lokasi">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>SMP</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="SMP" placeholder="Nama Sekolah/Lokasi">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>SMA</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="SMA" placeholder="Nama Sekolah/Lokasi">
+                      </div>
+                    </div>
+                    <div class="col-sm-4 my-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text bg-warning text-dark"><b>Kampus</b></label>
+                        </div>
+                        <input class="form-control" type="text" id="Universitas" placeholder="Nama Kampus/Lokasi">
+                      </div>
+                    </div>
+                    <div class="col-sm-3 my-1">
+                      <button type="button" class="btn btn-primary text-light" id="SimpanResponden"><b>Simpan</b></button> 
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Partisipasi Sekolah</b></label>
-                  </div>
-                  <select class="custom-select" id="PartisipasiSekolah">                    
-                    <option value="1">Tidak Pernah Sekolah</option>
-                    <option value="2">Masih Sekolah</option>
-                    <option value="3">Tidak Sekolah Lagi</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Pendidikan Tertinggi</b></label> 
-                  </div>
-                  <select class="custom-select" id="PendidikanTertinggi">                    
-                    <option value="1">SD/SDLB</option>
-                    <option value="2">MI</option>
-                    <option value="3">Paket A</option>
-                    <option value="4">SMP/SMLB</option>
-                    <option value="5">M.Ts</option>
-                    <option value="6">Paket B</option>
-                    <option value="7">SMA/SMLB</option>
-                    <option value="8">MA</option>
-                    <option value="9">SMK</option>
-                    <option value="10">Paket C</option>
-                    <option value="11">D1</option>
-                    <option value="12">D2</option>
-                    <option value="13">D3</option>
-                    <option value="14">D4/S1</option>
-                    <option value="15">S2</option>
-                    <option value="16">S3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-4 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Ijazah Tertinggi</b></label>
-                  </div>
-                  <select class="custom-select" id="IjazahTertinggi">                    
-                    <option value="1">Tdk Punya Ijazah</option>
-                    <option value="2">SD/SDLB</option>
-                    <option value="3">MI</option>
-                    <option value="4">Paket A</option>
-                    <option value="5">SMP/SMLB</option>
-                    <option value="6">M.Ts</option>
-                    <option value="7">Paket B</option>
-                    <option value="8">SMA/SMLB</option>
-                    <option value="9">MA</option>
-                    <option value="10">SMK</option>
-                    <option value="11">Paket C</option>
-                    <option value="12">D1</option>
-                    <option value="13">D2</option>
-                    <option value="14">D3</option>
-                    <option value="15">D4/S1</option>
-                    <option value="16">S2</option>
-                    <option value="17">S3</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Santri Aktif</b></label>
-                  </div>
-                  <select class="custom-select" id="Santri">                    
-                    <option value="1">Ya</option>
-                    <option value="2">Tidak</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Status Sekolah</b></label>
-                  </div>
-                  <select class="custom-select" id="StatusSekolah">                    
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">Tamat</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Baca Tulis</b></label>
-                  </div>
-                  <select class="custom-select" id="BacaTulis">                    
-                    <option value="1">Huruf Latin</option>
-                    <option value="2">Huruf Arab</option>
-                    <option value="3">Huruf Lain</option>
-                    <option value="4">All</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>SD</b></label>
-                  </div>
-                  <input class="form-control" type="text" id="SD" placeholder="Nama Sekolah/Lokasi">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>SMP</b></label>
-                  </div>
-                  <input class="form-control" type="text" id="SMP" placeholder="Nama Sekolah/Lokasi">
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>SMA</b></label>
-                  </div>
-                  <input class="form-control" type="text" id="SMA" placeholder="Nama Sekolah/Lokasi">
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text bg-warning text-dark"><b>Kampus</b></label>
-                  </div>
-                  <input class="form-control" type="text" id="Universitas" placeholder="Nama Kampus/Lokasi">
-                </div>
-              </div>
-              <div class="col-sm-3 my-1">
-              <button type="button" class="btn btn-primary text-light" id="SimpanResponden"><b>Simpan</b></button> 
-              </div>
-            </div>
-            </div>
-            <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
+            <!-- <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
             <div class="row">
               <div class="col-sm-6 my-1">
                 <div class="input-group">
@@ -433,8 +599,8 @@
                 </div>
               </div>
             </div>
-            </div>
-            <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
+            </div> -->
+            <!-- <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
               <?php $Kesehatan = array('Dokter','Bidan Desa','Polides','Peralatan Persalinan','RS Swasta','Klinik Bersalin Swasta','Puskesmas',
                                        'Posyandu','Pemeriksaan Kehamilan','Vaksinasi','Pemberian Vitamin','Obat-Obatan','Biaya Persalinan'); 
               foreach ($Kesehatan as $key => $value) { ?>
@@ -481,8 +647,8 @@
                   <textarea id="KendalaKesehatan" rows="4" cols="119"></textarea>
                 </div>    
               </div>
-            </div>
-            <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
+            </div> -->
+            <!-- <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
               <?php $Pendidikan = array('Gedung Sekolah','Ruang Kelas','Guru','Buku Pelajaran','Jarak','Sekolah Swasta','Biaya Sekolah'); 
               foreach ($Pendidikan as $key => $value) { ?>
                 <div class="row">
@@ -547,8 +713,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
+            </div> -->
+            <!-- <div class="container-fluid border border-primary rounded bg-light mb-1 mt-3">
               <?php $Komoditas = array('Beras','Tepung terigu','Ketela pohon/singkong','Kentang','Tongkol/tuna/cakalang','Kembung','Bandeng','Mujair','Mas','Lele','Ikan segar lainnya','Daging sapi','Daging ayam ras','Daging ayam kampung','Telur ayam ras','Susu kental manis','Susu bubuk','Susu bubuk bayi','Bayam','Kangkung','Kacang panjang','Bawang merah','Bawang putih','Cabe merah','Cabe rawit','Tahu','Tempe','Jeruk','Mangga','Salak','Pisang ambon','Pisang raja','Pisang lainnya','Pepaya','Minyak kelapa','Minyak goreng lainnya','Kelapa','Gula pasir','Teh','Kopi','Garam','Kecap','Penyedap masakan/vetsin','Mie instan','Roti manis/roti lainnya','Kue kering','Kue basah','Makanan gorengan','Gado-gado/ketoprak','Nasi campur/rames','Nasi goreng','Nasi putih','Lontong/ketupat sayur','Soto/gule/sop/rawon/cincang','Sate/tongseng','Mie bakso/mie rebus/mie goreng','Makanan ringan anak','Ikang (goreng/bakar dll)','Ayam/daging (goreng dll)','Makanan jadi lainnya','Air kemasan galon','Minuman jadi lainnya','Es lainnya','Roko kretek filter','Rokok kretek tanpa filter','Rokok putih','Perawatan rumah sendiri/bebas sewa','Rumah kontrak','Rumah sewa','Rumah dinas','Listrik','Air PAM','LPG','Minyak tanah','Lainnya(batu baterai,aki,korek,obat nyamuk dll)','Perlengkapan mandi','Barang kecantikan','Perawatan kulit,muka,kuku,rambut','Sabun cuci','Biaya RS Pemerintah','Biaya RS Swasta','Puskesmas/pustu','Praktek dokter/poliklinik','SPP','Bensin','Transportasi/pengangkutan umum','Pos dan Telekomunikasi','Pakaian jadi laki-laki dewasa','Pakaian jadi perempuan dewasa','Pakaian jadi anak-anak','Alas kaki','Minyak Pelumas','Meubelair','Peralatan Rumah Tangga','Perlengkapan perabot rumah tangga','Alat-alat Dapur/Makan'); 
                     $Satuan = array('Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','ml','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Kg','Liter','Liter','Butir','ons','ons','ons','ons','ml','ons','Bungkus','Bungkus','ons','buah','Bungkus','Bungkus','Bungkus','Bungkus','Bungkus','Bungkus','Piring','Piring','Piring','Bungkus','Kg','Kg','Bungkus','Gallon','ml','ml','Bungkus','Bungkus','Bungkus','Rp','Rp','Rp','Rp','Rp','M3','Kg','Liter','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Rp','Liter','Rp','Rp','Rp','Rp');
               foreach ($Komoditas as $key => $value) { ?>
@@ -593,8 +759,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> -->
         </section>
       </div>
     </div>
@@ -606,6 +771,32 @@
       $(document).ready(function(){
         
         var BaseURL = '<?=base_url()?>'
+
+        $("#Provinsi").change(function (){
+          var Provinsi = { Kode: $("#Provinsi").val() }
+          $.post(BaseURL+"Surveyor/Kabupaten", Provinsi).done(function(Respon) {
+            $('#Kabupaten').html(Respon)
+            var Kabupaten = { Kode: $("#Kabupaten").val() }
+            $.post(BaseURL+"Surveyor/Kecamatan", Kabupaten).done(function(Respon) {
+              $('#Kecamatan').html(Respon)
+              var Desa = { Kode: $("#Kecamatan").val() }
+              $.post(BaseURL+"Surveyor/Desa", Desa).done(function(Respon) {
+                $('#Desa').html(Respon)
+              })  
+            })  
+          })    
+        })
+
+        $("#Kabupaten").change(function (){
+          var Kabupaten = { Kode: $("#Kabupaten").val() }
+          $.post(BaseURL+"Surveyor/Kecamatan", Kabupaten).done(function(Respon) {
+            $('#Kecamatan').html(Respon)
+            var Desa = { Kode: $("#Kecamatan").val() }
+            $.post(BaseURL+"Surveyor/Desa", Desa).done(function(Respon) {
+              $('#Desa').html(Respon)
+            })  
+          })    
+        })
         
         $("#Kecamatan").change(function (){
           var Desa = { Kode: $("#Kecamatan").val() }
