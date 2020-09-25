@@ -16,7 +16,7 @@
     <!-- Site wrapper -->
     <div class="wrapper">
       <!-- Navbar -->
-      <nav class="main-header navbar navbar-expand bg-success">
+      <nav class="main-header navbar navbar-expand bg-primary">
           <!-- Left navbar links -->
           <ul class="navbar-nav">
               <li class="nav-item">
@@ -33,7 +33,7 @@
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="" class="brand-link bg-success">
+        <a href="" class="brand-link bg-primary">
         <img src="../img/Admin.png"
           alt="Logo"
           class="brand-image img-circle elevation-3"
@@ -48,6 +48,12 @@
               <a href="<?=base_url("Admin/Surveyor")?>" class="nav-link <?php if ($Halaman == "Surveyor") { echo "active";} ?>">
               <i class="nav-icon fas fa-user-circle"></i>
               <p><b>Surveyor</b></p> 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?=base_url("Admin/SurveiEkraf")?>" class="nav-link <?php if ($Halaman == "Survei Ekraf") { echo "active";} ?>">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p><b>Survei Ekraf</b></p> 
               </a>
             </li>
           </ul>
