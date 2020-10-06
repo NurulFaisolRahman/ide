@@ -11,7 +11,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Nomor KK</b></label>
+                        <label class="input-group-text bg-danger"><b>Nomor KK</b></label>
                       </div>
                       <input class="form-control" type="text" id="NomorKK" placeholder="Nomor KK">
                     </div>
@@ -19,7 +19,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Provinsi</b></label>
+                        <label class="input-group-text bg-danger"><b>Provinsi</b></label>
                       </div>
                       <select class="custom-select" id="Provinsi">  
                         <?php foreach ($Provinsi as $key) { ?>
@@ -31,7 +31,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Kabupaten</b></label>
+                        <label class="input-group-text bg-danger"><b>Kabupaten</b></label>
                       </div>
                       <select class="custom-select" id="Kabupaten">                    
                         <?php foreach ($Kabupaten as $key) { ?>
@@ -43,7 +43,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Kecamatan</b></label>
+                        <label class="input-group-text bg-danger"><b>Kecamatan</b></label>
                       </div>
                       <select class="custom-select" id="Kecamatan">  
                         <?php foreach ($Kecamatan as $key) { ?>
@@ -55,7 +55,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Desa/Kelurahan</b></label>
+                        <label class="input-group-text bg-danger"><b>Desa/Kelurahan</b></label>
                       </div>
                       <select class="custom-select" id="Desa">                    
                         <?php foreach ($Desa as $key) { ?>
@@ -67,7 +67,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Dusun</b></label>
+                        <label class="input-group-text bg-danger"><b>Dusun</b></label>
                       </div>
                       <input class="form-control" type="text" id="Dusun" placeholder="Nama Dusun">
                     </div>
@@ -75,7 +75,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>RT/RW</b></label>
+                        <label class="input-group-text bg-danger"><b>RT/RW</b></label>
                       </div>
                       <input class="form-control" type="text" id="RT/RW" placeholder="RT/RW">
                     </div>
@@ -83,7 +83,7 @@
                   <div class="col-sm-8 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Alamat</b></label>
+                        <label class="input-group-text bg-danger"><b>Alamat</b></label>
                       </div>
                       <input class="form-control" type="text" id="Alamat" placeholder="Alamat">
                     </div>
@@ -121,7 +121,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>NIK</b></label>
+                        <label class="input-group-text bg-danger"><b>NIK</b></label>
                       </div>
                       <input class="form-control" type="text" id="NIK" placeholder="Nomor Induk Keluarga">
                     </div>
@@ -129,7 +129,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Nama Anggota</b></label>
+                        <label class="input-group-text bg-danger"><b>Nama Anggota</b></label>
                       </div>
                       <input class="form-control" type="text" id="NamaAnggota">
                     </div>
@@ -137,7 +137,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Jenis Kelamin</b></label>
+                        <label class="input-group-text bg-danger"><b>Jenis Kelamin</b></label>
                       </div>
                       <select class="custom-select" id="Gender">                    
                         <option value="1">Laki-Laki</option>
@@ -148,7 +148,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Usia</b></label>
+                        <label class="input-group-text bg-danger"><b>Usia</b></label>
                       </div>
                       <input class="form-control" type="text" id="Usia">
                     </div>
@@ -156,7 +156,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Status Anggota</b></label>
+                        <label class="input-group-text bg-danger"><b>Status Anggota</b></label>
                       </div>
                       <select class="custom-select" id="StatusAnggota">                    
                         <option value="1">Suami</option>
@@ -179,7 +179,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Status Perkawinan</b></label>
+                        <label class="input-group-text bg-danger"><b>Status Perkawinan</b></label>
                       </div>
                       <select class="custom-select" id="StatusPerkawinan">                    
                         <option value="1">Belum Kawin</option>
@@ -192,7 +192,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Pendapatan Bersih Per Bulan</b></label>
+                        <label class="input-group-text bg-danger"><b>Pendapatan Bersih Per Bulan</b></label>
                       </div>
                       <input class="form-control" type="text" id="Pendapatan">
                     </div>
@@ -200,7 +200,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Pekerjaan</b></label>
+                        <label class="input-group-text bg-danger"><b>Pekerjaan</b></label>
                       </div>
                       <select class="custom-select" id="Pekerjaan">         
                         <option value="11">Tidak Bekerja</option>           
@@ -220,7 +220,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Jenis Pekerjaan</b></label>
+                        <label class="input-group-text bg-danger"><b>Jenis Pekerjaan</b></label>
                       </div>
                       <select class="custom-select" id="JenisPekerjaan">         
                         <option value="1">Tidak Bekerja</option>           
@@ -237,7 +237,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Jam Kerja</b></label>
+                        <label class="input-group-text bg-danger"><b>Jam Kerja</b></label>
                       </div>
                       <select class="custom-select" id="JamKerja">    
                         <?php for ($i=0; $i < 25; $i++) { ?>
@@ -249,7 +249,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Keahlian Yang Dimiliki</b></label>
+                        <label class="input-group-text bg-danger"><b>Keahlian Yang Dimiliki</b></label>
                       </div>
                       <input class="form-control" type="text" id="Keahlian">
                     </div>
@@ -257,7 +257,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Kegiatan Seminggu Lalu</b></label>
+                        <label class="input-group-text bg-danger"><b>Kegiatan Seminggu Lalu</b></label>
                       </div>
                       <select class="custom-select" id="KegiatanSeminggu">         
                         <option value="1">Tidak Bekerja</option>  
@@ -271,12 +271,12 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Alasan Mencari Kerja</b></label>
+                        <label class="input-group-text bg-danger"><b>Alasan Mencari Kerja</b></label>
                       </div>
                       <select class="custom-select" id="AlasanMencariKerja">         
-                        <option value="3">Alasan Lainnya</option>
                         <option value="1">Tamat Sekolah</option>           
                         <option value="2">Mencari Nafkah</option>
+                        <option value="3">Alasan Lainnya</option>
                       </select>
                     </div>
                   </div>
@@ -288,7 +288,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Lokasi Bekerja</b></label>
+                        <label class="input-group-text bg-danger"><b>Lokasi Bekerja</b></label>
                       </div>
                       <select class="custom-select" id="LokasiKerja">         
                         <option value="1">Dalam Kabupaten</option>           
@@ -304,7 +304,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Pertolongan Saat Di Lahirkan</b></label>
+                        <label class="input-group-text bg-danger"><b>Pertolongan Saat Di Lahirkan</b></label>
                       </div>
                       <select class="custom-select" id="PertolonganKelahiran">                    
                         <option value="1">Dokter</option>
@@ -319,7 +319,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Memiliki Kartu jaminan Kesehatan</b></label>
+                        <label class="input-group-text bg-danger"><b>Memiliki Kartu jaminan Kesehatan</b></label>
                       </div>
                       <select class="custom-select" id="KJK">                    
                         <option value="0">NA</option>
@@ -333,7 +333,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Pernah diberi ASI</b></label>
+                        <label class="input-group-text bg-danger"><b>Pernah diberi ASI</b></label>
                       </div>
                       <select class="custom-select" id="Asi">                    
                         <option value="1">Ya</option>
@@ -344,7 +344,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Pernah mendapat Imunisasi</b></label>
+                        <label class="input-group-text bg-danger"><b>Pernah mendapat Imunisasi</b></label>
                       </div>
                       <select class="custom-select" id="Imunisasi">                    
                         <option value="1">Ya</option>
@@ -355,7 +355,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Partisipasi Sekolah</b></label>
+                        <label class="input-group-text bg-danger"><b>Partisipasi Sekolah</b></label>
                       </div>
                       <select class="custom-select" id="PartisipasiSekolah">                    
                         <option value="1">Tidak Pernah Sekolah</option>
@@ -367,7 +367,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Pendidikan Tertinggi</b></label> 
+                        <label class="input-group-text bg-danger"><b>Pendidikan Tertinggi</b></label> 
                       </div>
                       <select class="custom-select" id="PendidikanTertinggi">                    
                         <option value="1">SD/SDLB</option>
@@ -392,7 +392,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Kelas Yang Pernah/Sedang Diduduki</b></label>
+                        <label class="input-group-text bg-danger"><b>Kelas Yang Pernah/Sedang Diduduki</b></label>
                       </div>
                       <select class="custom-select" id="StatusSekolah">                    
                         <option value="1">1</option>
@@ -410,7 +410,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Santri Aktif</b></label>
+                        <label class="input-group-text bg-danger"><b>Santri Aktif</b></label>
                       </div>
                       <select class="custom-select" id="Santri">                    
                         <option value="1">Ya</option>
@@ -421,7 +421,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Ijazah Tertinggi</b></label>
+                        <label class="input-group-text bg-danger"><b>Ijazah Tertinggi</b></label>
                       </div>
                       <select class="custom-select" id="IjazahTertinggi">                    
                         <option value="1">Tdk Punya Ijazah</option>
@@ -447,7 +447,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Bisa Baca Tulis</b></label>
+                        <label class="input-group-text bg-danger"><b>Bisa Baca Tulis</b></label>
                       </div>
                       <select class="custom-select" id="BacaTulis">                    
                         <option value="1">Huruf Latin</option>
@@ -460,7 +460,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>SD</b></label>
+                        <label class="input-group-text bg-danger"><b>SD</b></label>
                       </div>
                       <input class="form-control" type="text" id="SD" placeholder="Nama Sekolah/Lokasi">
                     </div>
@@ -468,7 +468,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>SMP</b></label>
+                        <label class="input-group-text bg-danger"><b>SMP</b></label>
                       </div>
                       <input class="form-control" type="text" id="SMP" placeholder="Nama Sekolah/Lokasi">
                     </div>
@@ -476,7 +476,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>SMA</b></label>
+                        <label class="input-group-text bg-danger"><b>SMA</b></label>
                       </div>
                       <input class="form-control" type="text" id="SMA" placeholder="Nama Sekolah/Lokasi">
                     </div>
@@ -484,7 +484,7 @@
                   <div class="col-sm-4 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Kampus</b></label>
+                        <label class="input-group-text bg-danger"><b>Kampus</b></label>
                       </div>
                       <input class="form-control" type="text" id="Universitas" placeholder="Nama Kampus/Lokasi">
                     </div>
@@ -506,19 +506,19 @@
                   <div class="col-sm-6 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Usia Istri Saat Pernikahan Pertama</b></label>
+                        <label class="input-group-text bg-danger"><b>Usia Istri Saat Pernikahan Pertama</b></label>
                       </div>
                       <input class="form-control" type="text" id="UsiaMenikah">
-                      <label class="input-group-text bg-warning text-dark"><b>Tahun</b></label>
+                      <label class="input-group-text bg-danger"><b>Tahun</b></label>
                     </div>
                   </div> 
                   <div class="col-sm-6 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Jumlah Tahun Dalam Ikatan Pernikahan</b></label>
+                        <label class="input-group-text bg-danger"><b>Jumlah Tahun Dalam Ikatan Pernikahan</b></label>
                       </div>
                       <input class="form-control" type="text" id="UsiaPernikahan">
-                      <label class="input-group-text bg-warning text-dark"><b>Tahun</b></label>
+                      <label class="input-group-text bg-danger"><b>Tahun</b></label>
                     </div>
                   </div>
                   <div class="col-sm-12">
@@ -542,7 +542,7 @@
                   <div class="col-sm-3 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>A.K Lahir Hidup</b></label>
+                        <label class="input-group-text bg-danger"><b>A.K Lahir Hidup</b></label>
                       </div>
                       <select class="custom-select" id="AnakLahirHidup">                    
                         <option value="1">Ya</option>
@@ -553,7 +553,7 @@
                   <div class="col-sm-3 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>A.K Masih Hidup</b></label>
+                        <label class="input-group-text bg-danger"><b>A.K Masih Hidup</b></label>
                       </div>
                       <select class="custom-select" id="AnakMasihHidup">                    
                         <option value="1">Ya</option>
@@ -564,7 +564,7 @@
                   <div class="col-sm-3 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>A.K Sudah Wafat</b></label>
+                        <label class="input-group-text bg-danger"><b>A.K Sudah Wafat</b></label>
                       </div>
                       <select class="custom-select" id="AnakSudahMeninggal">                    
                         <option value="1">Ya</option>
@@ -575,7 +575,7 @@
                   <div class="col-sm-3 my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Usia Anak</b></label>
+                        <label class="input-group-text bg-danger"><b>Usia Anak</b></label>
                       </div>
                       <input class="form-control" type="text" id="UsiaAnak">&emsp;
                       <button type="button" class="btn btn-primary text-light" id="SimpanFertilitas"><b>Simpan</b></button>
@@ -601,21 +601,21 @@
                     <div class="col-sm-auto my-1">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Ketercukupan</b></label>
+                          <label class="input-group-text bg-danger"><b>Ketercukupan</b></label>
                         </div>
                         <select class="custom-select" id="<?='KetercukupanKesehatan'.($key+1)?>">                    
                           <option value="1">Ya</option>
                           <option value="2">Tidak</option>
                         </select>
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Keterlayanan</b></label>
+                          <label class="input-group-text bg-danger"><b>Keterlayanan</b></label>
                         </div>
                         <select class="custom-select" id="<?='KeterlayananKesehatan'.($key+1)?>">                    
                           <option value="1">Ya</option>
                           <option value="2">Tidak</option>
                         </select>
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Prioritas Dikembangkan</b></label>
+                          <label class="input-group-text bg-danger"><b>Prioritas Dikembangkan</b></label>
                         </div>
                         <select class="custom-select" id="<?='PrioritasKesehatan'.($key+1)?>">                    
                           <option value="1">Ya</option>
@@ -627,7 +627,7 @@
                     <div class="col-sm-auto my-1">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Jelaskan Beberapa Kendala Dalam Mendapatkan Fasilitas Kesehatan</b></label>
+                          <label class="input-group-text bg-danger"><b>Jelaskan Beberapa Kendala Dalam Mendapatkan Fasilitas Kesehatan</b></label>
                         </div>
                       </div>
                     </div>
@@ -653,21 +653,21 @@
                     <div class="col-sm-auto my-1">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Ketercukupan</b></label>
+                          <label class="input-group-text bg-danger"><b>Ketercukupan</b></label>
                         </div>
                         <select class="custom-select" id="<?='KetercukupanPendidikan'.($key+1)?>">                    
                           <option value="1">Ya</option>
                           <option value="2">Tidak</option>
                         </select>
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Keterlayanan</b></label>
+                          <label class="input-group-text bg-danger"><b>Keterlayanan</b></label>
                         </div>
                         <select class="custom-select" id="<?='KeterlayananPendidikan'.($key+1)?>">                    
                           <option value="1">Ya</option>
                           <option value="2">Tidak</option>
                         </select>
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Prioritas Dikembangkan</b></label>
+                          <label class="input-group-text bg-danger"><b>Prioritas Dikembangkan</b></label>
                         </div>
                         <select class="custom-select" id="<?='PrioritasPendidikan'.($key+1)?>">                    
                           <option value="1">Ya</option>
@@ -679,7 +679,7 @@
                   <div class="col-sm-auto my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Tingkat Pendidikan Maksimal Yang Bisa Diusahakan</b></label>
+                        <label class="input-group-text bg-danger"><b>Tingkat Pendidikan Maksimal Yang Bisa Diusahakan</b></label>
                       </div>
                       <select class="custom-select" id="KesanggupanPendidikan">                    
                         <option value="1">SD/Sederajat</option>
@@ -694,7 +694,7 @@
                   <div class="col-sm-auto my-1">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <label class="input-group-text bg-warning text-dark"><b>Keluhan Pendidikan</b></label>
+                        <label class="input-group-text bg-danger"><b>Keluhan Pendidikan</b></label>
                       </div>
                       <select class="custom-select" id="KeluhanPendidikan">                    
                         <option value="1">Kurikulum Pendidikan</option>
@@ -722,14 +722,18 @@
                     <div class="col-sm-5 my-1">
                       <label class="input-group-text bg-success text-dark justify-content-center"><b><?=$value.' ('.$Satuan[$key].')'?></b></label>
                     </div>
-                    <div class="col-sm-auto my-1">
+                    <div class="col-sm-2 my-1">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Volume</b></label>
+                          <label class="input-group-text bg-danger"><b>Banyaknya</b></label>
                         </div>                
                         <input class="form-control" type="text" id="<?='VolumeKomoditas'.($key+1)?>">
+                      </div>
+                    </div>
+                    <div class="col-sm-3 my-1">
+                      <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Harga</b></label>
+                          <label class="input-group-text bg-danger"><b>Harga</b></label>
                         </div>
                         <input class="form-control" type="text" id="<?='HargaKomoditas'.($key+1)?>">
                       </div>
@@ -738,7 +742,7 @@
                     <div class="col-sm-6 my-1">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>5 Komoditas Yang Memberatkan</b></label>
+                          <label class="input-group-text bg-danger"><b>5 Komoditas Yang Memberatkan</b></label>
                         </div>
                         <input class="form-control" type="text" id="KomoditasMemberatkan">
                       </div>
@@ -746,7 +750,7 @@
                     <div class="col-sm-auto my-1">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <label class="input-group-text bg-warning text-dark"><b>Penyebab Pengangguran</b></label>
+                          <label class="input-group-text bg-danger"><b>Penyebab Pengangguran</b></label>
                         </div>
                         <select class="custom-select" id="PenyebabPengangguran">                    
                           <option value="1">Rendahnya Kualitas Pendidikan</option>
@@ -805,6 +809,30 @@
           })    
         })
 
+        $("#AnakLahirHidup").change(function (){
+          if ($('#AnakLahirHidup').val() == 2) {
+            $("#AnakMasihHidup").val(2);
+            $("#AnakSudahMeninggal").val(1);
+            $("#AnakMasihHidup").prop('disabled', true);
+            $("#AnakSudahMeninggal").prop('disabled', true);
+          } else {
+            $("#AnakMasihHidup").val(1);
+            $("#AnakSudahMeninggal").val(2);
+            $("#AnakMasihHidup").prop('disabled', false);
+            $("#AnakSudahMeninggal").prop('disabled', false);
+          }  
+        })
+
+        $("#AnakMasihHidup").change(function (){
+          if ($('#AnakMasihHidup').val() == 2) {
+            $("#AnakSudahMeninggal").val(1);
+            $("#AnakSudahMeninggal").prop('disabled', true);
+          } else {
+            $("#AnakSudahMeninggal").val(2);
+            $("#AnakSudahMeninggal").prop('disabled', false);
+          }  
+        })
+
         var KK = []
         var ModeEditKK = false
         var IdEditKK = 0
@@ -813,21 +841,30 @@
 
         $("#SimpanResponden").click(function() {
           if (ModeEditKK) {
+            KK[IdEditKK].NIK = $('#NIK').val()
             KK[IdEditKK].Nama = $('#NamaAnggota').val()
-            KK[IdEditKK].Status = $('#StatusAnggota').val()
             KK[IdEditKK].Gender = $('#Gender').val()
             KK[IdEditKK].Usia = $('#Usia').val()
+            KK[IdEditKK].StatusAnggota = $('#StatusAnggota').val()
+            KK[IdEditKK].StatusPerkawinan = $('#StatusPerkawinan').val()
             KK[IdEditKK].Pendapatan = $('#Pendapatan').val()
             KK[IdEditKK].Pekerjaan = $('#Pekerjaan').val()
+            KK[IdEditKK].JamKerja = $('#JamKerja').val()
+            KK[IdEditKK].Keahlian = $('#Keahlian').val()
+            KK[IdEditKK].KegiatanSeminggu = $('#KegiatanSeminggu').val()
+            KK[IdEditKK].AlasanMencariKerja = $('#AlasanMencariKerja').val()
+            KK[IdEditKK].AlasanMencariKerjaLainnya = $('#AlasanMencariKerjaLainnya').val()
+            KK[IdEditKK].LokasiKerja = $('#LokasiKerja').val()
+            KK[IdEditKK].AlasanLokasiBekerja = $('#AlasanLokasiBekerja').val()
             KK[IdEditKK].PertolonganKelahiran = $('#PertolonganKelahiran').val()
             KK[IdEditKK].KJK = $('#KJK').val()
             KK[IdEditKK].ASI = $('#ASI').val()
             KK[IdEditKK].Imunisasi = $('#Imunisasi').val()
             KK[IdEditKK].PartisipasiSekolah = $('#PartisipasiSekolah').val()
             KK[IdEditKK].PendidikanTertinggi = $('#PendidikanTertinggi').val()
-            KK[IdEditKK].IjazahTertinggi = $('#IjazahTertinggi').val()
-            KK[IdEditKK].Santri = $('#Santri').val()
             KK[IdEditKK].StatusSekolah = $('#StatusSekolah').val()
+            KK[IdEditKK].Santri = $('#Santri').val()
+            KK[IdEditKK].IjazahTertinggi = $('#IjazahTertinggi').val()
             KK[IdEditKK].BacaTulis = $('#BacaTulis').val()
             KK[IdEditKK].SD = $('#SD').val()
             KK[IdEditKK].SMP = $('#SMP').val()
@@ -837,40 +874,30 @@
             ModeEditKK = false
           } else {
             var Responden = {}
+            Responden['NIK'] = $('#NIK').val()
             Responden['Nama'] = $('#NamaAnggota').val()
-            Responden['Status'] = $('#StatusAnggota').val()
             Responden['Gender'] = $('#Gender').val()
             Responden['Usia'] = $('#Usia').val()
+            Responden['StatusAnggota'] = $('#StatusAnggota').val()
+            Responden['StatusPerkawinan'] = $('#StatusPerkawinan').val()
             Responden['Pendapatan'] = $('#Pendapatan').val()
             Responden['Pekerjaan'] = $('#Pekerjaan').val()
+            Responden['JamKerja'] = $('#JamKerja').val()
+            Responden['Keahlian'] = $('#Keahlian').val()
+            Responden['KegiatanSeminggu'] = $('#KegiatanSeminggu').val()
+            Responden['AlasanMencariKerja'] = $('#AlasanMencariKerja').val()
+            Responden['AlasanMencariKerjaLainnya'] = $('#AlasanMencariKerjaLainnya').val()
+            Responden['LokasiKerja'] = $('#LokasiKerja').val()
+            Responden['AlasanLokasiBekerja'] = $('#AlasanLokasiBekerja').val()
             Responden['PertolonganKelahiran'] = $('#PertolonganKelahiran').val()
             Responden['KJK'] = $('#KJK').val()
             Responden['ASI'] = $('#ASI').val()
             Responden['Imunisasi'] = $('#Imunisasi').val()
             Responden['PartisipasiSekolah'] = $('#PartisipasiSekolah').val()
             Responden['PendidikanTertinggi'] = $('#PendidikanTertinggi').val()
-            Responden['IjazahTertinggi'] = $('#IjazahTertinggi').val()
+            Responden['StatusSekolah'] = $('#StatusSekolah').val()  
             Responden['Santri'] = $('#Santri').val()
-            Responden['StatusSekolah'] = $('#StatusSekolah').val()
-            // if ($('#PendidikanTertinggi').val() < 4) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 6 : $('#StatusSekolah').val()
-            // } else if ($('#PendidikanTertinggi').val() < 7) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 9 : $('#StatusSekolah').val()
-            // } else if ($('#PendidikanTertinggi').val() < 11) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 12 : ($('#StatusSekolah').val()+9)
-            // } else if ($('#PendidikanTertinggi').val() == 11) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 13 : ($('#StatusSekolah').val()+9)
-            // } else if ($('#PendidikanTertinggi').val() == 12) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 14 : ($('#StatusSekolah').val()+9)
-            // } else if ($('#PendidikanTertinggi').val() == 13) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 15 : ($('#StatusSekolah').val()+9)
-            // } else if ($('#PendidikanTertinggi').val() == 14) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 16 : ($('#StatusSekolah').val()+9)
-            // } else if ($('#PendidikanTertinggi').val() == 15) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 18 : ($('#StatusSekolah').val()+9)
-            // } else if ($('#PendidikanTertinggi').val() == 16) {
-            //   Responden['LamaSekolah'] = $('#StatusSekolah').val() == 9 ? 12 : ($('#StatusSekolah').val()+9)
-            // }
+            Responden['IjazahTertinggi'] = $('#IjazahTertinggi').val()
             Responden['BacaTulis'] = $('#BacaTulis').val()
             Responden['SD'] = $('#SD').val()
             Responden['SMP'] = $('#SMP').val()
@@ -883,27 +910,36 @@
 
         $(document).on("click",".Edit",function(){
           var Edit = KK[$(this).attr('Edit')]
+          $('#NIK').val(Edit.NIK)
           $('#NamaAnggota').val(Edit.Nama)
-          $('#StatusAnggota').val(Edit.Status)
           $('#Gender').val(Edit.Gender)
           $('#Usia').val(Edit.Usia)
+          $('#StatusAnggota').val(Edit.StatusAnggota)
+          $('#StatusPerkawinan').val(Edit.StatusPerkawinan)
           $('#Pendapatan').val(Edit.Pendapatan)
           $('#Pekerjaan').val(Edit.Pekerjaan)
+          $('#JamKerja').val(Edit.JamKerja)
+          $('#Keahlian').val(Edit.Keahlian)
+          $('#KegiatanSeminggu').val(Edit.KegiatanSeminggu)
+          $('#AlasanMencariKerja').val(Edit.AlasanMencariKerja)
+          $('#AlasanMencariKerjaLainnya').val(Edit.AlasanMencariKerjaLainnya)
+          $('#LokasiKerja').val(Edit.LokasiKerja)
+          $('#AlasanLokasiBekerja').val(Edit.AlasanLokasiBekerja)
           $('#PertolonganKelahiran').val(Edit.PertolonganKelahiran)
           $('#KJK').val(Edit.KJK)
           $('#ASI').val(Edit.ASI)
           $('#Imunisasi').val(Edit.Imunisasi)
           $('#PartisipasiSekolah').val(Edit.PartisipasiSekolah)
           $('#PendidikanTertinggi').val(Edit.PendidikanTertinggi)
-          $('#IjazahTertinggi').val(Edit.IjazahTertinggi)
-          $('#Santri').val(Edit.Santri)
           $('#StatusSekolah').val(Edit.StatusSekolah)
+          $('#Santri').val(Edit.Santri)
+          $('#IjazahTertinggi').val(Edit.IjazahTertinggi)
           $('#BacaTulis').val(Edit.BacaTulis)
           $('#SD').val(Edit.SD)
           $('#SMP').val(Edit.SMP)
           $('#SMA').val(Edit.SMA)
           $('#Universitas').val(Edit.Universitas)
-          IdEditAnak = $(this).attr('Edit')
+          IdEditKK = $(this).attr('Edit')
           ModeEditKK = true
         })
 
@@ -972,7 +1008,7 @@
           rows = rows + '<tr>';
           rows = rows + '<td class="text-center align-middle">'+(key+1)+'</td>';
           rows = rows + '<td class="align-middle">'+value.Nama+'</td>';
-          rows = rows + '<td class="align-middle">'+Status[value.Status-1]+'</td>';
+          rows = rows + '<td class="align-middle">'+Status[value.StatusAnggota-1]+'</td>';
           rows = rows + '<td class="align-middle">'+Gender[value.Gender-1]+'</td>';
           rows = rows + '<td class="align-middle">'+value.Usia+'</td>';
           rows = rows + '<td class="text-center align-middle">';
